@@ -1,7 +1,9 @@
 # Webapp Base
 This is my base framework for doing quick webapp development - a
 react-based webapp with a bootstrap theme that I like, and a
-golang-based backend supporting GraphQL with a mongo database
+golang-based backend supporting GraphQL with a mongo database.
+
+It doesn't sound like a big deal, but when I have an idea I want to hack on, I don't want to waste time setting up a go project, getting it to build right in VSCode, adding node, remembering what modules I liked using from previous experiments. I want to write some business logic, add some data, put a front end on it and play with the idea. And preferrably do all that in a relatively secure way.
 
 # Idea and design
 When creating this project, the following ideas were put together for a dream list of 
