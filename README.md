@@ -33,7 +33,7 @@ When creating this project, the following ideas were put together for a dream li
 ## Pre-requisites
 To get started, the following items are needed for local R&D (osx reminders in parenthesis):
  * go
- * [dep](https://github.com/golang/dep) (`brew install dep`)
+ * ~~[dep](https://github.com/golang/dep)~~ (trying [go modules](https://github.com/golang/go/wiki/Modules))
  * npm?
  * docker?
 
