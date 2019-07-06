@@ -1,4 +1,4 @@
-# Testapp
+# Webapp Base
 This is my base framework for doing quick webapp development - a
 react-based webapp with a bootstrap theme that I like, and a
 golang-based backend supporting GraphQL with a mongo database
