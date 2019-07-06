@@ -8,7 +8,7 @@ jobs:
     steps: 
       - checkout 
       - run:
-        name: "Build server"
-        command: |
-          cd server
-          go build
+          name: Build server
+          command: |
+            cd server
+            go build
