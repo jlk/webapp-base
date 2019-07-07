@@ -32,6 +32,15 @@ When creating this project, the following ideas were put together for a dream li
  * release checklist - things to do/customize/test/document
  * offline dev is a plus
 
+## Decisions
+To give a little insight into some of the choices that have been made here:
+
+### Typescript vs JavaScript
+JavaScript is broken. I'm trying TypeScript on this project in hopes of improving appsec, after I was reminded of it by my Application Security Weekly co-host Mike Shema.
+
+### Apollo vs Relay for GraphQL
+After tinkering with Apollo and Relay, and reading things like https://blog.bitsrc.io/apollo-and-relay-side-by-side-adb5e3844935 I've decided Apollo is the way to go. I sorta like the idea of Relay being opinionated, but I really dislike projects with weak support or bad docs, and working through the [getting started](https://relay.dev/docs/en/quick-start-guide) page just felt more confusing than useful.
+
 ## Pre-requisites
 To get started, the following items are needed for local R&D (osx reminders in parenthesis):
  * go
