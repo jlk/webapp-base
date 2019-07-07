@@ -6,6 +6,7 @@ import (
 
 	"github.com/jlk/webapp-base/server/mutations"
 	"github.com/jlk/webapp-base/server/queries"
+	"github.com/sirupsen/logrus"
 
 	"github.com/graphql-go/graphql"
 	"github.com/graphql-go/handler"
@@ -26,7 +27,10 @@ func main() {
 	http.Handle("/graphql", disableCors(h))
 
 	log.Println("Now server is running on port 3000")
-	http.ListenAndServe(":3000", nil)
+	err := http.ListenAndServe(":3000", nil)
+	if err != nil {
+		logrus.Errorf("Error when attempting to start network server: %s", err.Error())
+	}
 }
 
 func disableCors(h http.Handler) http.Handler {
