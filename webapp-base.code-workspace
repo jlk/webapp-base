@@ -3,7 +3,7 @@
 		// 7/6/2019: HACK: specifying server path separately to get gopls to properly recognize go.mod and paths to imports
 		// See https://code.visualstudio.com/docs/editor/multi-root-workspaces#_settings
 		{
-			"path": "cilent"
+			"path": "client"
 		},
 		{
 			"path": "server"
