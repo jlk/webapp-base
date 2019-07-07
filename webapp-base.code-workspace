@@ -12,5 +12,11 @@
 			// by putting . last, we can access stuffs in the root of the project.
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"go.lintTool":"golangci-lint",
+		"go.lintFlags": [
+		  "--fast"
+		]
+	}
 }
