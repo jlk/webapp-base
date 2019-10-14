@@ -10,7 +10,7 @@ func init() {
 	Config.SetEnvPrefix("j")
 
 	// Move these somewhere else in time
-	Config.SetDefault("ListenPort", 3000)
+	Config.SetDefault("ListenPort", 4000)
 	// mongodb://myuser:mypass@localhost:40001,otherhost:40001/mydb
 	// or https://godoc.org/github.com/globalsign/mgo#Dial
 	Config.SetDefault("mgoURL", "mongodb://admin:mongocloud@localhost:27017/admin")
