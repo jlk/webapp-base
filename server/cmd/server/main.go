@@ -10,10 +10,7 @@ import (
 
 func main() {
 	ginRouter := gin.Default()
-	// log.Println("Now server is running on port " + data.Config.GetString("ListenPort"))
-	// err := http.ListenAndServe(":"+data.Config.GetString("ListenPort"), nil)
-	// connect db
-	// setup logs
+	// Database connection happens in data/postgres.go init()
 
 	ginRouter.GET("/devices", controllers.GetDevices)
 	ginRouter.Run(fmt.Sprintf(":" + data.Config.GetString("ListenPort")))
