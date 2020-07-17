@@ -17,6 +17,8 @@
 		"go.lintTool":"golangci-lint",
 		"go.lintFlags": [
 		  "--fast"
-		]
+		],
+		"git.ignoreLimitWarning": true,
+		"typescript.tsdk": "client/node_modules/typescript/lib"
 	}
 }
