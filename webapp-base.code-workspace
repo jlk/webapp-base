@@ -20,5 +20,19 @@
 		],
 		"git.ignoreLimitWarning": true,
 		"typescript.tsdk": "client/node_modules/typescript/lib"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch",
+				"type": "go",
+				"request": "launch",
+				"mode": "auto",
+				"program": "${fileDirname}",
+				"env": {},
+				"args": []
+			}
+		]
 	}
 }
