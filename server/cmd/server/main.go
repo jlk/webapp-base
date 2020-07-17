@@ -5,27 +5,10 @@ import (
 	"net/http"
 
 	"github.com/jlk/webapp-base/server/data"
-	"github.com/jlk/webapp-base/server/mutations"
-	"github.com/jlk/webapp-base/server/queries"
 	"github.com/sirupsen/logrus"
-
-	"github.com/graphql-go/graphql"
-	"github.com/graphql-go/handler"
 )
 
-var schema, _ = graphql.NewSchema(graphql.SchemaConfig{
-	Query:    queries.RootQuery,
-	Mutation: mutations.RootMutation,
-})
-
 func main() {
-
-	h := handler.New(&handler.Config{
-		Schema: &schema,
-		Pretty: true,
-	})
-
-	http.Handle("/graphql", disableCors(h))
 
 	log.Println("Now server is running on port " + data.Config.GetString("ListenPort"))
 	err := http.ListenAndServe(":"+data.Config.GetString("ListenPort"), nil)

@@ -3,12 +3,13 @@ module github.com/jlk/webapp-base/server
 go 1.12
 
 require (
-	github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8
-	github.com/golangci/golangci-lint v1.20.0 // indirect
-	github.com/graphql-go/graphql v0.7.8
-	github.com/graphql-go/handler v0.2.3
+	github.com/jmoiron/sqlx v1.2.0
 	github.com/sirupsen/logrus v1.4.2
+	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.4.0
-	golang.org/x/tools v0.0.0-20191011211836-4c025a95b26e // indirect
-	golang.org/x/tools/gopls v0.1.7 // indirect
+	github.com/stretchr/testify v1.4.0 // indirect
+	golang.org/x/sys v0.0.0-20190922100055-0a153f010e69 // indirect
+	golang.org/x/text v0.3.2 // indirect
+	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
+	gopkg.in/yaml.v2 v2.2.4 // indirect
 )
