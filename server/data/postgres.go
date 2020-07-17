@@ -3,6 +3,7 @@ package data // import "github.com/jlk/webapp-base/server/data"
 import (
 	"fmt"
 
+	_ "github.com/jackc/pgx/v4/stdlib"
 	"github.com/jlk/webapp-base/server/util"
 	"github.com/jmoiron/sqlx"
 	"github.com/sirupsen/logrus"
@@ -19,8 +20,8 @@ func init() {
 	dbHost := Config.GetString("dbHost")
 	dbUsername := Config.GetString("dbUsername")
 	dbPassword := Config.GetString("dbPassword")
-	dbDatabaseName := Config.GetString("dbDatabseName")
-	dbSSLMode := Config.GetBool("dbSSLMode")
+	dbDatabaseName := Config.GetString("dbDatabaseName")
+	dbSSLMode := Config.GetString("dbSSLMode")
 	var maskedDbPassword = ""
 
 	if len(dbHost) == 0 || len(dbUsername) == 0 || len(dbPassword) == 0 || len(dbDatabaseName) == 0 {
@@ -37,8 +38,8 @@ func init() {
 		logrus.Fatal("Cannot connect to database. Exiting")
 	}
 
-	pgsqlConnectionString := fmt.Sprintf("host=%s user=%s password=%s dbname=%s sslmode=%t", dbHost, dbUsername, dbPassword, dbDatabaseName, dbSSLMode)
-	maskedPgsqlConnectionString := fmt.Sprintf("host=%s user=%s password=%s dbname=%s sslmode=%t", dbHost, dbUsername, maskedDbPassword, dbDatabaseName, dbSSLMode)
+	pgsqlConnectionString := fmt.Sprintf("host=%s user=%s password=%s dbname=%s sslmode=%s", dbHost, dbUsername, dbPassword, dbDatabaseName, dbSSLMode)
+	maskedPgsqlConnectionString := fmt.Sprintf("host=%s user=%s password=%s dbname=%s sslmode=%s", dbHost, dbUsername, maskedDbPassword, dbDatabaseName, dbSSLMode)
 	logrus.Info("Connecting to database at " + maskedPgsqlConnectionString)
 	// TODO: Support private TLS certs
 	PG, err = sqlx.Connect("pgx", pgsqlConnectionString)

@@ -1,18 +1,20 @@
 package main
 
 import (
-	"log"
-	"net/http"
+	"fmt"
 
+	"github.com/gin-gonic/gin"
+	"github.com/jlk/webapp-base/server/controllers"
 	"github.com/jlk/webapp-base/server/data"
-	"github.com/sirupsen/logrus"
 )
 
 func main() {
+	ginRouter := gin.Default()
+	// log.Println("Now server is running on port " + data.Config.GetString("ListenPort"))
+	// err := http.ListenAndServe(":"+data.Config.GetString("ListenPort"), nil)
+	// connect db
+	// setup logs
 
-	log.Println("Now server is running on port " + data.Config.GetString("ListenPort"))
-	err := http.ListenAndServe(":"+data.Config.GetString("ListenPort"), nil)
-	if err != nil {
-		logrus.Errorf("Error when attempting to start network server: %s", err.Error())
-	}
+	ginRouter.GET("/devices", controllers.GetDevices)
+	ginRouter.Run(fmt.Sprintf(":" + data.Config.GetString("ListenPort")))
 }
