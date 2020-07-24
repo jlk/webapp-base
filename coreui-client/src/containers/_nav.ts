@@ -7,6 +7,12 @@ export default [
         name: 'Dashboard',
         to: '/dashboard',
         icon: 'cil-speedometer',
+      },
+      {
+        _name: 'CSidebarNavItem',
+        name: 'Things',
+        to: '/things',
+        icon: 'cil-speedometer',
         badge: {
           color: 'primary',
           text: 'NEW'

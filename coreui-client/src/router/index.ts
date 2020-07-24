@@ -7,6 +7,9 @@ const TheContainer = () => import('@/containers/TheContainer.vue')
 // Views
 const Dashboard = () => import('@/views/Dashboard.vue')
 
+// Newly added views
+const Things = () => import('@/views/Things.vue')
+
 const Colors = () => import('@/views/theme/Colors.vue')
 const Typography = () => import('@/views/theme/Typography.vue')
 
@@ -74,6 +77,11 @@ function configRoutes () {
       name: 'Home',
       component: TheContainer,
       children: [
+        {
+          path: 'things',
+          name: 'Things',
+          component: Things
+        },
         {
           path: 'dashboard',
           name: 'Dashboard',
