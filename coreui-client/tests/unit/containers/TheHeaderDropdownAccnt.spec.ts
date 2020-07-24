@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import CoreuiVue from '@coreui/vue'
-import TheHeaderDropdownAccnt from '@/containers/TheHeaderDropdownAccnt'
+import TheHeaderDropdownAccnt from '@/containers/TheHeaderDropdownAccnt.vue'
 import { shallowMount } from '@vue/test-utils';
 
 Vue.use(CoreuiVue)

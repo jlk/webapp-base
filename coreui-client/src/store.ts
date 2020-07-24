@@ -8,15 +8,15 @@ const state = {
 }
 
 const mutations = {
-  toggleSidebarDesktop (state) {
+  toggleSidebarDesktop (state: { sidebarShow: string | boolean }) {
     const sidebarOpened = [true, 'responsive'].includes(state.sidebarShow)
     state.sidebarShow = sidebarOpened ? false : 'responsive'
   },
-  toggleSidebarMobile (state) {
+  toggleSidebarMobile (state: { sidebarShow: string | boolean }) {
     const sidebarClosed = [false, 'responsive'].includes(state.sidebarShow)
     state.sidebarShow = sidebarClosed ? true : 'responsive'
   },
-  set (state, [variable, value]) {
+  set (state: { [x: string]: any }, [variable, value]: any) {
     state[variable] = value
   }
 }

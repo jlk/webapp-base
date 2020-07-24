@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount, mount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Cards from '@/views/base/Cards'
+import Cards from '@/views/base/Cards.vue'
 
 Vue.use(CoreuiVue)
 

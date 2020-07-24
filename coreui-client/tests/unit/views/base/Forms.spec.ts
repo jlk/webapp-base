@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Forms from '@/views/base/Forms'
+import Forms from '@/views/base/Forms.vue'
 
 Vue.use(CoreuiVue)
 

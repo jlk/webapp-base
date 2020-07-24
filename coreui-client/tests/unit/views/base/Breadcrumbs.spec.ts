@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount, mount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Breadcrumbs from '@/views/base/Breadcrumbs'
+import Breadcrumbs from '@/views/base/Breadcrumbs.vue'
 
 Vue.use(CoreuiVue)
 

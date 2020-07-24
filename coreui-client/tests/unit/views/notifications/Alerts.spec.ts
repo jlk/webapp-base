@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Alerts from '@/views/notifications/Alerts'
+import Alerts from '@/views/notifications/Alerts.vue'
 
 Vue.use(CoreuiVue)
 

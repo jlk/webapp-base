@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { mount, shallowMount } from '@vue/test-utils';
 import CoreuiVue from '@coreui/vue'
-import ProgressBars from '@/views/base/ProgressBars'
+import ProgressBars from '@/views/base/ProgressBars.vue'
 
 Vue.use(CoreuiVue)
 

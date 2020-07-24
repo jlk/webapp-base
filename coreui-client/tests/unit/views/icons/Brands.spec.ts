@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Brands from '@/views/icons/Brands'
+import Brands from '@/views/icons/Brands.vue'
 
 Vue.use(CoreuiVue)
 

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Page404 from '@/views/pages/Page404'
+import Page404 from '@/views/pages/Page404.vue'
 
 Vue.use(CoreuiVue)
 

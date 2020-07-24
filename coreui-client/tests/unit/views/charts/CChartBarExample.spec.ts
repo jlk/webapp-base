@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils';
 import CoreuiVue from '@coreui/vue'
-import CChartBarExample from '@/views/charts/CChartBarExample'
+import CChartBarExample from '@/views/charts/CChartBarExample.vue'
 
 Vue.use(CoreuiVue)
 
@@ -22,7 +22,7 @@ describe('CChartBarExample', () => {
     expect(wrapper.element).toMatchSnapshot()
   })
   it('should have computed', () => {
-    const wrapper = shallowMount(CChartBarExample)
+    const wrapper: any = shallowMount(CChartBarExample)
 
     expect(wrapper.vm.defaultDatasets).toBeDefined()
   })

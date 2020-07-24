@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount, mount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Dropdowns from '@/views/buttons/Dropdowns'
+import Dropdowns from '@/views/buttons/Dropdowns.vue'
 
 Vue.use(CoreuiVue)
 

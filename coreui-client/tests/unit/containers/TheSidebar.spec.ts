@@ -1,7 +1,7 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import CoreuiVue from '@coreui/vue'
 import Vuex from 'vuex'
-import TheSidebar from '@/containers/TheSidebar'
+import TheSidebar from '@/containers/TheSidebar.vue'
 
 const localVue = createLocalVue()
 localVue.use(CoreuiVue)

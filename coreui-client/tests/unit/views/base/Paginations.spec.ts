@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Paginations from '@/views/base/Paginations'
+import Paginations from '@/views/base/Paginations.vue'
 
 Vue.use(CoreuiVue)
 

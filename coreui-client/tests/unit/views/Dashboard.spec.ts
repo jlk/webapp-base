@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Dashboard from '@/views/Dashboard'
+import Dashboard from '@/views/Dashboard.vue'
 
 
 Vue.use(CoreuiVue)

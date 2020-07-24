@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount, mount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Collapses from '@/views/base/Collapses'
+import Collapses from '@/views/base/Collapses.vue'
 
 Vue.use(CoreuiVue)
 

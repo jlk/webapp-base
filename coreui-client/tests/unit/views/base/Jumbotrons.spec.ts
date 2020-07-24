@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Jumbotrons from '@/views/base/Jumbotrons'
+import Jumbotrons from '@/views/base/Jumbotrons.vue'
 
 Vue.use(CoreuiVue)
 

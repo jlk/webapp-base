@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { mount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Badges from '@/views/notifications/Badges'
+import Badges from '@/views/notifications/Badges.vue'
 
 Vue.use(CoreuiVue)
 

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Popovers from '@/views/base/Popovers'
+import Popovers from '@/views/base/Popovers.vue'
 
 Vue.use(CoreuiVue)
 

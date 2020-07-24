@@ -1,20 +1,20 @@
 import 'core-js/stable'
 import Vue from 'vue'
-import App from './App'
+import App from './App.vue'
 import router from './router'
 import CoreuiVue from '@coreui/vue'
-import { iconsSet as icons } from './assets/icons/icons.js'
+import { iconsSet as icons } from './assets/icons/icons'
 import store from './store'
 
 Vue.config.performance = true
 Vue.use(CoreuiVue)
 Vue.prototype.$log = console.log.bind(console)
-
 new Vue({
   el: '#app',
   router,
   store,
-  icons,
+  // FIXME: This isn't working in ts, at least with my currently poor ts skillz. -jlk
+  // icons,
   template: '<App/>',
   components: {
     App

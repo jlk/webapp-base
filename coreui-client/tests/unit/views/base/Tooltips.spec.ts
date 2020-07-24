@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils';
 import CoreuiVue from '@coreui/vue'
-import Tooltips from '@/views/base/Tooltips'
+import Tooltips from '@/views/base/Tooltips.vue'
 
 Vue.use(CoreuiVue)
 

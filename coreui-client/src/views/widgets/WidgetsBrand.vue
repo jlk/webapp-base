@@ -156,7 +156,7 @@
 </template>
 
 <script>
-import { CChartLineSimple } from '../charts/index.js'
+import { CChartLineSimple } from '../charts/index.ts'
 
 export default {
   name: 'WidgetsBrand',

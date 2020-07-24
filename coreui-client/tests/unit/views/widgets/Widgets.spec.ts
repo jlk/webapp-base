@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Widgets from '@/views/widgets/Widgets'
+import Widgets from '@/views/widgets/Widgets.vue'
 
 Vue.use(CoreuiVue)
 

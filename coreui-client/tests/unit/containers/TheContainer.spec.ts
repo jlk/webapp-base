@@ -2,7 +2,7 @@ import CoreuiVue from '@coreui/vue'
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
-import TheContainer from '@/containers/TheContainer'
+import TheContainer from '@/containers/TheContainer.vue'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)

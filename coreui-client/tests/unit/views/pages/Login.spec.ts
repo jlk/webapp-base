@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import CoreuiVue from '@coreui/vue'
-import Login from '@/views/pages/Login'
+import Login from '@/views/pages/Login.vue'
 
 Vue.use(CoreuiVue)
 
