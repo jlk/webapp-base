@@ -18,7 +18,7 @@ When creating this project, the following ideas were put together for a dream li
    * ~~mgo~~ (nope - back to postgresql)
    * [SQLX](github.com/jmoiron/sqlx) and [PGX](github.com/jackc/pgx) for Postgres support
    * [go-cache](https://github.com/patrickmn/go-cache) for caching objects from db
-   * 
+   * [paho.mqtt.golang](https://github.com/eclipse/paho.mqtt.golang) to send/get data on a MQTT queue
  * vue-based frontend
    * bootstrap via CoreUI
  * Support for:
@@ -57,6 +57,9 @@ If you use this, I **strongly suggest you pay for a license**. Support is really
 
 ### ReST vs GraphQL
 If you look at older versions of this README, you'll see discussion of Apollo vs Relay for GraphQL support. That just wasn't as nice/easy/clean as I wanted, and at the end of the day if I want to bring more developers into a project, REST is a no-brainer. KISS.
+
+### Message Queue
+Almost forgot to mention as it worked so easily, but it's an important part of the architecture. Actually, MQTT was the original intention for Layered Insight 5ish years ago, but due to a misunderstanding AMQP and rabbitmq was used instead. It was coded by the time I noticed, and as a startup it wasn't worth fixing. Anyways, yeah. I like using queues.
 
 ### Mongo vs SQL
 This will get a laugh from compatriots at my last gig where I fought like crazy to not have Layered Insight ported from Mongo to Cassandra. I still believe that was the right decision there, but moving forward, over the last decade Postgres has picked up features and performance. Mysql is great for some quick hacking, but Postgres seems to have an edge in production environments.
