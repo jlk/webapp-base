@@ -1,54 +1,25 @@
 package main
 
 import (
-	"log"
-	"net/http"
+	"fmt"
 
+	"github.com/gin-contrib/cors"
+	"github.com/gin-gonic/gin"
+	"github.com/jlk/webapp-base/server/controllers"
 	"github.com/jlk/webapp-base/server/data"
-	"github.com/jlk/webapp-base/server/mutations"
-	"github.com/jlk/webapp-base/server/queries"
-	"github.com/sirupsen/logrus"
-
-	"github.com/graphql-go/graphql"
-	"github.com/graphql-go/handler"
 )
 
-var schema, _ = graphql.NewSchema(graphql.SchemaConfig{
-	Query:    queries.RootQuery,
-	Mutation: mutations.RootMutation,
-})
-
 func main() {
+	ginRouter := gin.Default()
+	ginRouter.Use(cors.New(cors.Config{
+		AllowOrigins:  []string{"http://localhost:8080"},
+		AllowMethods:  []string{"GET"},
+		AllowHeaders:  []string{"Origin"},
+		ExposeHeaders: []string{"Content-Length"},
+	}))
 
-	h := handler.New(&handler.Config{
-		Schema: &schema,
-		Pretty: true,
-	})
+	// Database connection happens in data/postgres.go init()
 
-	http.Handle("/graphql", disableCors(h))
-
-	log.Println("Now server is running on port " + data.Config.GetString("ListenPort"))
-	err := http.ListenAndServe(":"+data.Config.GetString("ListenPort"), nil)
-	if err != nil {
-		logrus.Errorf("Error when attempting to start network server: %s", err.Error())
-	}
-}
-
-func disableCors(h http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-
-		w.Header().Set("Access-Control-Allow-Origin", "*")
-		w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
-
-		w.Header().Set("Access-Control-Allow-Headers", "Accept, Authorization, Content-Type, Content-Length, Accept-Encoding")
-
-		if r.Method == "OPTIONS" {
-			w.Header().Set("Access-Control-Max-Age", "86400")
-			w.WriteHeader(http.StatusOK)
-			return
-		}
-
-		h.ServeHTTP(w, r)
-
-	})
+	ginRouter.GET("/devices", controllers.GetDevices)
+	ginRouter.Run(fmt.Sprintf(":" + data.Config.GetString("ListenPort")))
 }

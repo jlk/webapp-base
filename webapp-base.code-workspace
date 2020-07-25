@@ -3,7 +3,7 @@
 		// 7/6/2019: HACK: specifying server path separately to get gopls to properly recognize go.mod and paths to imports
 		// See https://code.visualstudio.com/docs/editor/multi-root-workspaces#_settings
 		{
-			"path": "client"
+			"path": "coreui-client"
 		},
 		{
 			"path": "server"
@@ -19,6 +19,20 @@
 		  "--fast"
 		],
 		"git.ignoreLimitWarning": true,
-		"typescript.tsdk": "client/node_modules/typescript/lib"
+		"typescript.tsdk": "coreui-client/node_modules/typescript/lib"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch",
+				"type": "go",
+				"request": "launch",
+				"mode": "auto",
+				"program": "${fileDirname}",
+				"env": {},
+				"args": []
+			}
+		]
 	}
 }
