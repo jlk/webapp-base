@@ -17,6 +17,8 @@ When creating this project, the following ideas were put together for a dream li
    * viper
    * ~~mgo~~ (nope - back to postgresql)
    * [SQLX](github.com/jmoiron/sqlx) and [PGX](github.com/jackc/pgx) for Postgres support
+   * [go-cache](https://github.com/patrickmn/go-cache) for caching objects from db
+   * 
  * vue-based frontend
    * bootstrap via CoreUI
  * Support for:
@@ -92,4 +94,6 @@ When I've done heavier lifts, like bringing in CoreUI, there's a good amount of 
 # Thanks
 Ideas for this came from previous experience, along with the following blog posts:
  * https://medium.com/@chrischuck35/how-to-build-a-simple-web-app-in-react-graphql-go-e71c79beb1d (not using, but I'll still give props as that guided me for a while)
+ * https://medium.com/avitotech/how-to-work-with-postgres-in-go-bad2dabd13e4 interesting read for pgsql in go
+ * https://github.com/tmrts/go-patterns good list of Go patterns
 
