@@ -1,4 +1,4 @@
-server/server
+server/cmd/server/server
 
 .DS_Store
 coreui-client/node_modules
