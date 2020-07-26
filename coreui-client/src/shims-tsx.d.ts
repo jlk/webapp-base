@@ -1,4 +1,11 @@
 import Vue, { VNode } from 'vue'
+import { CRenderFunction } from '@coreui/vue'
+
+declare module 'vue/types/options' {
+  interface ComponentOptions<V extends Vue> {
+    icons?: { [key: string]: string[] }
+  }
+}
 
 declare global {
   namespace JSX {
@@ -10,4 +17,5 @@ declare global {
       [elem: string]: any
     }
   }
+  type ContentToRender = CRenderFunction['contentToRender']
 }

@@ -13,8 +13,7 @@ new Vue({
   el: '#app',
   router,
   store,
-  // FIXME: This isn't working in ts, at least with my currently poor ts skillz. -jlk
-  // icons,
+  icons,
   template: '<App/>',
   components: {
     App
