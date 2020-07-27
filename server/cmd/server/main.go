@@ -20,6 +20,6 @@ func main() {
 
 	// Database connection happens in data/postgres.go init()
 
-	ginRouter.GET("/devices", controllers.GetDevices)
+	ginRouter.GET("/things", controllers.GetThings)
 	ginRouter.Run(fmt.Sprintf(":" + data.Config.GetString("ListenPort")))
 }
