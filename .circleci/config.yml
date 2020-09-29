@@ -1,4 +1,8 @@
 version: 2.1
+
+orbs:
+  go: circleci/go@1.14
+
 jobs:
   build: 
     executor:
@@ -7,11 +11,14 @@ jobs:
     steps: 
       - checkout 
       - go/mod-download-cached
+      - run:
+          name: Build server
+          command: |
+            cd server/cmd/server
+            go build
 
-orbs:
-  go: circleci/go@1.12
-  version: 2.1
-  workflows:
-    main:
-        jobs:
-          - build
+workflows:
+  main:
+      jobs:
+        - build
+
