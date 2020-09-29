@@ -1,5 +1,6 @@
 # Webapp Base
 [![DeepSource](https://deepsource.io/gh/jlk/webapp-base.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/jlk/webapp-base/?ref=repository-badge)
+![CircleCI](https://img.shields.io/circleci/build/gh/jlk/webapp-base)
 
 This is my base framework for doing quick webapp development - a
 [vue-based](https://vuejs.org/) webapp with the [CoreUI admin template](https://coreui.io/),
