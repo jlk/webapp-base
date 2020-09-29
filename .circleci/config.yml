@@ -10,7 +10,8 @@ jobs:
       tag: '1.15'
     working_directory: ~/project/server
     steps: 
-      - checkout
+      - checkout:
+        path: ~/project
       - go/mod-download-cached
       - run:
           name: Build server
