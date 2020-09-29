@@ -8,12 +8,10 @@ jobs:
     executor:
       name: go/default
       tag: '1.15'
+    working_directory: ~/project/server
     steps: 
-      - checkout 
-      - run:
-          name: Move to server directory
-          command: |
-            cd server/cmd/server
+      - checkout:
+          path: ~/project/server
       - go/mod-download-cached
       - run:
           name: Build server
