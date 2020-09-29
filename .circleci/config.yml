@@ -11,7 +11,7 @@ jobs:
     working_directory: ~/project/server
     steps: 
       - checkout:
-        path: ~/project
+          path: ~/project
       - go/mod-download-cached
       - run:
           name: Build server
