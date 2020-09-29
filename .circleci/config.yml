@@ -10,5 +10,5 @@ jobs:
       - run:
           name: Build server
           command: |
-            cd server
+            cd server/cmd/server
             go build
