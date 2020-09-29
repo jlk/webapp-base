@@ -1,4 +1,5 @@
 # Webapp Base
+[![DeepSource](https://deepsource.io/gh/jlk/webapp-base.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/jlk/webapp-base/?ref=repository-badge)
 This is my base framework for doing quick webapp development - a
 [vue-based](https://vuejs.org/) webapp with the [CoreUI admin template](https://coreui.io/),
 and a golang-based backend supporting Rest API with a postgres database.
