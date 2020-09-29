@@ -1,14 +1,26 @@
-version: 2
+version: 2.1
+
+orbs:
+  go: circleci/go@1.4.0
+
 jobs:
   build: 
-    docker:
-      # CircleCI Go images available at: https://hub.docker.com/r/circleci/golang/
-      - image: circleci/golang:1.12
-
+    executor:
+      name: go/default
+      tag: '1.15'
+    working_directory: ~/project/server
     steps: 
-      - checkout 
+      - checkout:
+          path: ~/project
+      - go/mod-download-cached
       - run:
           name: Build server
           command: |
-            cd server
+            cd cmd/server
             go build
+
+workflows:
+  main:
+      jobs:
+        - build
+
