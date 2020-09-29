@@ -16,6 +16,7 @@ jobs:
       - run:
           name: Build server
           command: |
+            cd cmd/server
             go build
 
 workflows:
