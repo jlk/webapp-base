@@ -5,7 +5,7 @@ name = "go"
 enabled = true
 
   [analyzers.meta]
-  import_paths = ["github.com/jlk/webapp-base"]
+  import_root = "github.com/jlk/webapp-base"
 
 [[analyzers]]
 name = "javascript"
